@@ -2,7 +2,7 @@
 ## functions do
 ## makeCacheMatrix: This function creates a special object that can cache the inverse of the input matrix.
 ## cacheSolve: The input is makeCacheMatrix object. If the inverse has already been calculated (and the matrix has not changed), 
-then the cachesolve should retrieve the inverse from the cache of this makeCacheMatrix object.
+## then the cachesolve should retrieve the inverse from the cache of this makeCacheMatrix object.
 ## Example:
 ## x<-cbind(c(2,0),c(0,1))
 ## y<-makeCacheMatrix(x)
