@@ -6,7 +6,9 @@
 ## Example:
 ## x<-cbind(c(2,0),c(0,1))
 ## y<-makeCacheMatrix(x)
-## cacheSolve(y)
+## cacheSolve(y) # Calling this function for the first time will calculate the inverse of x.
+## cacheSolve(y) # This time it will print message "getting cached data"
+
 
 
 
@@ -48,7 +50,7 @@ cacheSolve <- function(x, ...) {
 	## If inv is not null, it means that the inverse of x has been calculated. We return what's stored in cache.
       if(!is.null(inv)) {
       	message("getting cached data")
-            return(m)
+            return(inv)
       }
 	## Else if inv in null, then inverse of x has not been calculated. We use solve() to calculate the inverse.
       temp <- x$get()
